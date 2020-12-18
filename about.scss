@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  font-family: "Noto Sans", "Noto Sans KR", sans-serif;
+  letter-spacing: 2px;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+.main {
+  height: 100%;
+  width: 100%;
+  .nav {
+    height: 220px;
+    width: 100%;
+    padding-top: 30px;
+    .title {
+      color: white;
+      text-transform: uppercase;
+      margin: 0 auto;
+      max-width: 1100px;
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+      a {
+        text-decoration: none;
+        color: white;
+        cursor: pointer;
+      }
+      a:visited {
+        color: white;
+      }
+      span:nth-child(1) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          red,
+          orange,
+          yellow,
+          green,
+          cyan,
+          blue,
+          violet
+        );
+        animation: animate1 3s linear infinite;
+      }
+      span:nth-child(2) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          to left,
+          transparent,
+          red,
+          orange,
+          yellow,
+          green,
+          cyan,
+          blue,
+          violet
+        );
+        animation: animate2 3s linear infinite;
+      }
+    }
+  }
+  .contents {
+    width: 100%;
+    height: 100%;
+    .title {
+      color: #eeeeee;
+      font-size: 40px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .titlebottom {
+      height: 1px;
+      width: 100px;
+      background-color: #eee;
+      margin: 30px auto 60px auto;
+    }
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #eee;
+      #infospan {
+        text-align: left;
+        width: 270px;
+      }
+      .name {
+        span:first-child {
+          font-size: 25px;
+          margin-right: 12px;
+        }
+      }
+      .job {
+        margin-bottom: 20px;
+        color: #888;
+      }
+    }
+    .infobottom {
+      height: 1px;
+      width: 100px;
+      background-color: #eee;
+      margin: 70px auto 60px auto;
+    }
+    .motto {
+      margin: 50px auto 0 auto;
+      color: #eee;
+      text-align: center;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      word-break: keep-all;
+    }
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@media screen and (max-width: 780px) {
+  .main {
+    .contents {
+      margin-bottom: 30px;
+      .motto {
+        max-width: 390px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .main {
+    .nav {
+      height: 130px;
+      .title {
+        height: 70px;
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  * {
+    font-size: 14px;
+  }
+  .main {
+    .nav {
+      .title {
+        a {
+          font-size: 11px;
+        }
+      }
+    }
+    .contents {
+      .title {
+        font-size: 30px;
+      }
+      .titlebottom {
+        width: 70px;
+        margin: 20px auto 40px auto;
+      }
+      .info {
+        #infospan {
+          width: 252px;
+        }
+        .name {
+          span:first-child {
+            font-size: 22px;
+          }
+        }
+        .job {
+          margin-bottom: 15px;
+        }
+      }
+      .infobottom {
+        width: 70px;
+        margin: 50px auto 40px auto;
+      }
+      .motto {
+        margin: 40px auto 30px auto;
+        max-width: 270px;
+        span {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 330px) {
+  .main {
+    .nav {
+      .title {
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
